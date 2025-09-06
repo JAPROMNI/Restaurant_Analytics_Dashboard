@@ -30,7 +30,7 @@
         </script>
         
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌵 Desert Oasis Weekly P&L Dashboard</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
@@ -394,6 +394,18 @@
             font-size: 13px;
             font-style: italic;
         }
+        /* iPad specific - maintains your layout */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            body {
+                min-width: 1400px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .container {
+                width: 1400px;
+            }
+        }
+
     </style>
 </head>
 <body>
