@@ -406,6 +406,7 @@
             }
         }
         
+
         /* iPhone/Mobile specific - stacked layout */
         @media screen and (max-width: 767px) {
             body {
@@ -414,36 +415,40 @@
             .container {
                 padding: 0;
             }
-            .header {
-                padding: 20px;
-                border-radius: 12px;
+            /* ... other existing iPhone styles ... */
+            
+            /* ADD THIS for Level 2 day-grid */
+            .day-grid {
+                display: flex !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                gap: 10px !important;
+                padding-bottom: 10px !important;
             }
-            .header h1 {
-                font-size: 24px;
+            .day-card {
+                min-width: 160px !important;
+                flex-shrink: 0 !important;
             }
-            .tabs {
-                gap: 8px;
+            .auto-clockout-content {
+                overflow-x: visible !important;
             }
-            .tab {
-                padding: 10px 16px;
-                font-size: 14px;
+            .auto-clockout-table {
+                display: block !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                white-space: nowrap !important;
             }
-            .metrics-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
+            .auto-clockout-table thead,
+            .auto-clockout-table tbody,
+            .auto-clockout-table tr {
+                display: table !important;
+                width: 100% !important;
+                table-layout: fixed !important;
             }
-            .restaurants-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            .restaurant-card {
-                padding: 20px;
-            }
-            .restaurant-metrics {
-                grid-template-columns: 1fr;
+            .auto-clockout-table {
+                min-width: 600px !important;
             }
         }
-
     </style>
 </head>
 <body>
