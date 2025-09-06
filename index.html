@@ -22,9 +22,9 @@
 </head>
 <body>
     <script>
-    // Simple single password protection
+    // Password protection
     (function() {
-        const password = 'Tako';
+        const password = 'taco2024';
         
         let authenticated = sessionStorage.getItem('authenticated');
         
@@ -35,11 +35,14 @@
                 sessionStorage.setItem('authenticated', 'true');
             } else {
                 document.body.innerHTML = '<div style="text-align:center; margin-top:100px; font-family:sans-serif;"><h1>Access Denied</h1><p>Incorrect password. Please contact administrator.</p></div>';
-                throw new Error('Unauthorized');
+                // Removed the throw new Error line that was breaking it
+                return false;
             }
         }
     })();
     </script>
+    
+    <div class="container">
         
         body::before {
             content: "";
