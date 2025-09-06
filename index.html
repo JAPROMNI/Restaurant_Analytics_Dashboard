@@ -2,6 +2,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <script>
+        (function() {
+            // Check if already authenticated
+            if (sessionStorage.getItem('dashboard_authenticated') === 'true') {
+                return; // Already authenticated
+            }
+            
+            // Hide entire document immediately
+            document.documentElement.style.visibility = 'hidden';
+            
+            // Wait for DOM to load
+            window.addEventListener('DOMContentLoaded', function() {
+                var userPassword = prompt('Enter password to access dashboard:');
+                
+                if (userPassword === 'Tako') {
+                    sessionStorage.setItem('dashboard_authenticated', 'true');
+                    document.documentElement.style.visibility = 'visible';
+                } else {
+                    document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;"><div style="text-align:center;"><h1 style="color:#C67B5C;">Access Denied</h1><p>Invalid password. Please refresh the page to try again.</p></div></div>';
+                    document.documentElement.style.visibility = 'visible';
+                    // Stop all scripts from running
+                    window.stop();
+                }
+            });
+        })();
+        </script>
+        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌵 Desert Oasis Weekly P&L Dashboard</title>
@@ -370,26 +397,6 @@
     </style>
 </head>
 <body>
-    <script>
-    // Password protection
-    (function() {
-        const password = 'Tako';
-        
-        let authenticated = sessionStorage.getItem('authenticated');
-        
-        if (!authenticated) {
-            const userPassword = prompt('Enter password to view dashboard:');
-            
-            if (userPassword === password) {
-                sessionStorage.setItem('authenticated', 'true');
-            } else {
-                document.body.innerHTML = '<div style="text-align:center; margin-top:100px; font-family:sans-serif;"><h1>Access Denied</h1><p>Incorrect password. Please contact administrator.</p></div>';
-                return false;
-            }
-        }
-    })();
-    </script>
-
     <div class="container">
         <div class="header">
             <h1>
