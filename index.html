@@ -31,7 +31,7 @@
         
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌵 Desert Oasis Weekly P&L Dashboard</title>
+    <title>OMNI Analytics Dashboard</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
         
@@ -2806,7 +2806,7 @@
                         '<div style="background: white; padding: 20px; border-radius: 10px;">' +
                         '<strong style="font-size: 20px;">Performance Metrics</strong><br><br>' +
                         '<div style="font-size: 18px; line-height: 1.8;">' +
-                        'Total Sales: <strong>$' + data.evening_sales + '</strong><br>' +
+                        'Total Sales: <strong>$' + data.evening_sales.toFixed(0) + '</strong><br>' +
                         '• Drive-thru: $' + (data.evening_sales * 0.7).toFixed(0) + ' (70%)<br>' +
                         '• Lobby: $' + (data.evening_sales * 0.3).toFixed(0) + ' (30%)<br><br>' +
                         'Service Times:<br>' +
