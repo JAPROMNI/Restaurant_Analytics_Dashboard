@@ -410,17 +410,69 @@
 
         /* iPhone/Mobile specific - stacked layout */
         @media screen and (max-width: 767px) {
-            /* ... existing styles ... */
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 0;
+            }
+            .header {
+                padding: 20px;
+                border-radius: 12px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .tabs {
+                gap: 8px;
+            }
+            .tab {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .restaurants-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .restaurant-card {
+                padding: 20px;
+                margin: 0 !important;
+            }
+            .restaurant-metrics {
+                grid-template-columns: 1fr;
+            }
+            .week-summary {
+                margin: 0 !important;
+            }
+            
+            /* Level 2 day-grid horizontal scroll */
+            .day-grid {
+                display: flex !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                gap: 10px !important;
+                padding-bottom: 10px !important;
+            }
+            .day-card {
+                min-width: 160px !important;
+                flex-shrink: 0 !important;
+            }
             
             /* Auto clock-out mobile cards */
             .auto-clockout-table {
                 display: none !important;
-             }
-             .auto-clockout-mobile {
-                 display: block !important;
-             }
-        }
-    </style>
+            }
+            .auto-clockout-mobile {
+                display: block !important;
+            }
+        } 
+   </style>
 </head>
 <body>
     <div class="container">
