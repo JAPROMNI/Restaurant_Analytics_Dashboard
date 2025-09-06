@@ -415,9 +415,36 @@
             .container {
                 padding: 0;
             }
-            /* ... other existing iPhone styles ... */
+            .header {
+                padding: 20px;
+                border-radius: 12px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .tabs {
+                gap: 8px;
+            }
+            .tab {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .restaurants-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .restaurant-card {
+                padding: 20px;
+            }
+            .restaurant-metrics {
+                grid-template-columns: 1fr;
+            }
             
-            /* ADD THIS for Level 2 day-grid */
+            /* Level 2 day-grid horizontal scroll */
             .day-grid {
                 display: flex !important;
                 overflow-x: auto !important;
@@ -429,27 +456,15 @@
                 min-width: 160px !important;
                 flex-shrink: 0 !important;
             }
-            .auto-clockout-content {
-                overflow-x: visible !important;
-            }
+            
+            /* Auto clock-out mobile cards (replaces table) */
             .auto-clockout-table {
+                display: none !important;
+            }
+            .auto-clockout-mobile {
                 display: block !important;
-                overflow-x: auto !important;
-                -webkit-overflow-scrolling: touch !important;
-                white-space: nowrap !important;
             }
-            .auto-clockout-table thead,
-            .auto-clockout-table tbody,
-            .auto-clockout-table tr {
-                display: table !important;
-                width: 100% !important;
-                table-layout: fixed !important;
-            }
-            .auto-clockout-table {
-                min-width: 600px !important;
-            }
-        }
-    </style>
+        }    </style>
 </head>
 <body>
     <div class="container">
@@ -734,6 +749,145 @@
                     </tbody>
                 </table>
                 </div>
+                
+                <!-- Mobile-friendly card version -->
+                <div class="auto-clockout-mobile" style="display: none;">
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Sandra's Mexican Cuisine</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                6 incidents | Impact: -$794.40
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Cardenas, Salvador</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Cook</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Tue 5:36 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">8.4h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>22.4h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Lino Santana, David </div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Prep</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 5:14 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">8.8h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>22.8h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Urena, Melissa </div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Host</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 6:13 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">7.8h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>21.8h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Tink-A-Tako #12</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                5 incidents | Impact: -$929.25
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Brito, Victor </div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Regular</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Mon 7:03 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">7.0h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>20.9h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Salinas, Zoila</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Manager S.</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Tue 3:00 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">7.0h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>13.0h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$90.00</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Salinas, Zoila</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Manager S.</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 7:26 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">6.6h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>20.6h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.70</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Tink-A-Tako #9</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                2 incidents | Impact: -$307.20
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Salazar, Betty</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Chef</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Tue 9:05 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.4h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>6.9h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$97.20</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">CASHIER, AM</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 1:28 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.5h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>14.5h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
         </div>
@@ -1002,6 +1156,145 @@
                     </tbody>
                 </table>
                 </div>
+                
+                <!-- Mobile-friendly card version -->
+                <div class="auto-clockout-mobile" style="display: none;">
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Sandra's Mexican Cuisine</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                2 incidents | Impact: -$-52.80
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Aragon, Cecilia</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Tortillera</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Tue 9:37 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">23.9h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>6.4h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$-262.65</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Tovar , Gabriel</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Shift Leader</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Fri 8:13 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">5.8h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>19.8h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Tink-A-Tako #12</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                6 incidents | Impact: -$1139.25
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Rangel, Arturo</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Mon 12:48 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">1.2h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>15.2h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Rangel, Arturo</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Tue 7:55 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">2.1h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>8.1h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$89.85</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Caviedes, Esperansa</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Server</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 7:46 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">6.2h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>20.2h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Tink-A-Tako #9</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                3 incidents | Impact: -$629.70
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Martinez , Sami</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Server</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Mon 1:13 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.8h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>14.8h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">CASHIER, AM</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Tue 1:26 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.6h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>14.6h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">CASHIER, AM</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Thu 1:35 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.4h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>14.4h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
         </div>
@@ -1227,6 +1520,106 @@
 
                     </tbody>
                 </table>
+                </div>
+                
+                <!-- Mobile-friendly card version -->
+                <div class="auto-clockout-mobile" style="display: none;">
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Sandra's Mexican Cuisine</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                1 incidents | Impact: -$210.00
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Salinas, Zoila</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Mon 7:19 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">6.7h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>20.7h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Tink-A-Tako #12</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                5 incidents | Impact: -$809.55
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Rangel, Arturo</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Mon 9:27 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.6h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>6.5h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$90.00</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Salinas, Zoila</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Manager S.</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 7:21 AM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">6.7h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>20.6h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$209.85</strong></span>
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">Rangel, Arturo</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">General Manager</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Wed 2:42 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">7.3h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>13.3h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$89.85</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="background: white; border-radius: 10px; margin: 10px 0; border: 1px solid rgba(194, 154, 108, 0.2); overflow: hidden;">
+                        <div style="padding: 15px; background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%);">
+                            <strong style="color: #C67B5C; font-size: 16px;">Tink-A-Tako #9</strong>
+                            <div style="font-size: 14px; color: #7A6458; margin-top: 5px;">
+                                1 incidents | Impact: -$210.00
+                            </div>
+                        </div>
+
+                        <div style="padding: 12px 15px; border-bottom: 1px solid rgba(194, 154, 108, 0.1);">
+                            <div style="font-weight: 600; color: #4A3F36; font-size: 15px;">C, PM Cashier</div>
+                            <div style="font-size: 13px; color: #7A6458; margin-top: 3px;">Cashier</div>
+                            <div style="font-size: 12px; color: #8B7969; margin-top: 5px;">
+                                Clocked In: Sat 1:21 PM
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(194, 154, 108, 0.05);">
+                                <span style="font-size: 13px;">Sug: <strong style="color: #5B8A72;">0.7h</strong></span>
+                                <span style="font-size: 13px;">Rec: <strong>14.7h</strong></span>
+                                <span style="font-size: 13px;">Impact: <strong style="color: #C67B5C;">-$210.00</strong></span>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
