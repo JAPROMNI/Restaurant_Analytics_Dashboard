@@ -616,7 +616,8 @@
                     </div>
                 </div>
                 
-                <table class="auto-clockout-table">
+                <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                <table class="auto-clockout-table" style="min-width: 600px;">
                     <thead>
                         <tr>
                             <th>Restaurant</th>
@@ -727,6 +728,7 @@
 
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         </div>
@@ -882,7 +884,8 @@
                     </div>
                 </div>
                 
-                <table class="auto-clockout-table">
+                <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                <table class="auto-clockout-table" style="min-width: 600px;">
                     <thead>
                         <tr>
                             <th>Restaurant</th>
@@ -993,6 +996,7 @@
 
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         </div>
@@ -1142,7 +1146,8 @@
                     </div>
                 </div>
                 
-                <table class="auto-clockout-table">
+                <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+                <table class="auto-clockout-table" style="min-width: 600px;">
                     <thead>
                         <tr>
                             <th>Restaurant</th>
@@ -1217,6 +1222,7 @@
 
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         </div>
@@ -1267,34 +1273,34 @@
             htmlContent += '<style>';
             htmlContent += '@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Source+Sans+3:wght@300;400;500;600&display=swap");';
             htmlContent += '* { margin: 0; padding: 0; box-sizing: border-box; }';
-            htmlContent += 'body { font-family: "Source Sans 3", -apple-system, sans-serif; background: linear-gradient(180deg, #E8F5E9 0%, #F1F8E9 50%, #F9FBE7 100%); color: #2E4A3E; line-height: 1.6; position: relative; }';
-            htmlContent += 'body::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(45deg, rgba(76, 114, 76, 0.03) 25%, transparent 25%), linear-gradient(-45deg, rgba(76, 114, 76, 0.03) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(76, 114, 76, 0.03) 75%), linear-gradient(-45deg, transparent 75%, rgba(76, 114, 76, 0.03) 75%); background-size: 30px 30px; background-position: 0 0, 0 15px, 15px -15px, -15px 0px; pointer-events: none; }';
+            htmlContent += 'body { font-family: "Source Sans 3", -apple-system, sans-serif; background: linear-gradient(180deg, #F4E4D4 0%, #E8D5C4 50%, #F0DCC8 100%); color: #4A3F36; line-height: 1.6; position: relative; }';
+            htmlContent += 'body::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(ellipse at top right, rgba(255, 218, 185, 0.3) 0%, transparent 40%), radial-gradient(ellipse at bottom left, rgba(188, 170, 152, 0.2) 0%, transparent 40%); pointer-events: none; }';
             htmlContent += '.container { max-width: 1400px; margin: 0 auto; padding: 40px; }';
-            htmlContent += '.header { background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 252, 247, 0.95) 100%); border-radius: 20px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(76, 114, 76, 0.1); border: 1px solid rgba(139, 195, 74, 0.2); }';
-            htmlContent += 'h1 { font-size: 36px; font-weight: 400; color: #2E4A3E; font-family: "Crimson Text", serif; letter-spacing: 0.02em; }';
-            htmlContent += 'h2 { font-size: 26px; font-weight: 600; color: #2E4A3E; margin: 28px 0; font-family: "Crimson Text", serif; }';
-            htmlContent += '.level { background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 252, 247, 0.9) 100%); border-radius: 20px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(76, 114, 76, 0.08); border: 1px solid rgba(139, 195, 74, 0.15); }';
+            htmlContent += '.header { background: linear-gradient(135deg, rgba(255, 251, 245, 0.95) 0%, rgba(250, 243, 232, 0.95) 100%); border-radius: 20px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(139, 105, 74, 0.1); border: 1px solid rgba(194, 154, 108, 0.2); }';
+            htmlContent += 'h1 { font-size: 36px; font-weight: 400; color: #4A3F36; font-family: "Crimson Text", serif; letter-spacing: 0.02em; }';
+            htmlContent += 'h2 { font-size: 26px; font-weight: 600; color: #4A3F36; margin: 28px 0; font-family: "Crimson Text", serif; }';
+            htmlContent += '.level { background: linear-gradient(135deg, rgba(255, 251, 245, 0.9) 0%, rgba(250, 243, 232, 0.9) 100%); border-radius: 20px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(139, 105, 74, 0.08); border: 1px solid rgba(194, 154, 108, 0.15); }';
             htmlContent += '.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin: 28px 0; }';
-            htmlContent += '.metric-card { background: linear-gradient(135deg, #FAFFF5 0%, #F5FAF0 100%); border-radius: 16px; padding: 24px; border: 1px solid rgba(124, 179, 66, 0.2); transition: all 0.3s; }';
-            htmlContent += '.metric-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(124, 179, 66, 0.15); }';
+            htmlContent += '.metric-card { background: linear-gradient(135deg, #FFF8F0 0%, #FAF0E6 100%); border-radius: 16px; padding: 24px; border: 1px solid rgba(194, 154, 108, 0.2); transition: all 0.3s; }';
+            htmlContent += '.metric-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(139, 105, 73, 0.15); }';
             htmlContent += '.grade { padding: 6px 14px; border-radius: 8px; font-size: 14px; font-weight: 600; color: white; display: inline-block; }';
-            htmlContent += '.grade-a { background: linear-gradient(135deg, #66BB6A, #4CAF50); }';
+            htmlContent += '.grade-a { background: linear-gradient(135deg, #5B8A72, #4CAF50); }';
             htmlContent += '.grade-b { background: linear-gradient(135deg, #FFB74D, #FF9800); }';
             htmlContent += '.grade-c { background: linear-gradient(135deg, #EF5350, #F44336); }';
             htmlContent += '.day-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; margin: 28px 0; }';
-            htmlContent += '.day-card { background: linear-gradient(135deg, #FFFFFF 0%, #FAFFF5 100%); border-radius: 12px; padding: 18px; text-align: center; border: 1px solid rgba(124, 179, 66, 0.15); transition: all 0.3s; }';
-            htmlContent += '.day-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(124, 179, 66, 0.2); border-color: rgba(124, 179, 66, 0.3); }';
+            htmlContent += '.day-card { background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 100%); border-radius: 12px; padding: 18px; text-align: center; border: 1px solid rgba(194, 154, 108, 0.15); transition: all 0.3s; }';
+            htmlContent += '.day-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(139, 105, 73, 0.2); border-color: rgba(194, 154, 108, 0.3); }';
             htmlContent += 'table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 24px 0; border-radius: 12px; overflow: hidden; }';
             htmlContent += 'th { background: linear-gradient(90deg, #E8F5E9 0%, #F1F8E9 100%); padding: 14px; text-align: left; font-weight: 600; color: #2E4A3E; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }';
-            htmlContent += 'td { padding: 14px; border-bottom: 1px solid rgba(139, 195, 74, 0.1); color: #3E5A4E; background: white; }';
-            htmlContent += 'tr:hover td { background: linear-gradient(90deg, #FAFFF5 0%, #F8FDF3 100%); }';
-            htmlContent += 'pre { background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%); padding: 24px; border-radius: 12px; font-family: monospace; overflow-x: auto; border: 1px solid rgba(139, 195, 74, 0.2); color: #2E4A3E; }';
+            htmlContent += 'td { padding: 14px; border-bottom: 1px solid rgba(194, 154, 108, 0.1); color: #4A3F36; background: white; }';
+            htmlContent += 'tr:hover td { background: linear-gradient(90deg, #FFF8F0 0%, #FAF0E6 100%); }';
+            htmlContent += 'pre { background: linear-gradient(135deg, #FAF0E6 0%, #FFF8F0 100%); padding: 24px; border-radius: 12px; font-family: monospace; overflow-x: auto; border: 1px solid rgba(194, 154, 108, 0.2); color: #4A3F36; }';
             htmlContent += '.button-group { text-align: center; margin-top: 40px; }';
             htmlContent += 'button { padding: 14px 32px; margin: 0 10px; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; transition: all 0.3s; font-weight: 500; }';
-            htmlContent += '.btn-primary { background: linear-gradient(135deg, #66BB6A, #4CAF50); color: white; }';
-            htmlContent += '.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3); }';
-            htmlContent += '.btn-secondary { background: white; color: #2E4A3E; border: 2px solid rgba(139, 195, 74, 0.3); }';
-            htmlContent += '.btn-secondary:hover { background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%); }';
+            htmlContent += '.btn-primary { background: linear-gradient(135deg, #5B8A72, #6FA86F); color: white; }';
+            htmlContent += '.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(91, 138, 114, 0.3); }';
+            htmlContent += '.btn-secondary { background: white; color: #4A3F36; border: 2px solid rgba(194, 154, 108, 0.3); }';
+            htmlContent += '.btn-secondary:hover { background: linear-gradient(135deg, #FAF0E6 0%, #FFF8F0 100%); }';
             htmlContent += '</style>';
             htmlContent += '</head><body>';
             htmlContent += '<div class="container" style="max-width: 1600px; margin: 0 auto; padding: 30px;">';
@@ -1312,7 +1318,7 @@
             // Header with Sales and Cash Position
             htmlContent += '<div style="text-align: center; margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, #FAFFF5 0%, #F5FAF0 100%); border-radius: 16px; border: 1px solid rgba(124, 179, 66, 0.2);">';
             htmlContent += '<h3 style="font-size: 40px; margin-bottom: 10px; color: #2E4A3E;">Weekly Sales: $' + level1Data.weekly_revenue.toFixed(0) + '</h3>';
-            htmlContent += '<div style="font-size: 14px; color: #5A7A6A; text-transform: uppercase; letter-spacing: 0.05em;">Net Sales: 100% | Cash Expected: $' + (level1Data.weekly_revenue * 0.15).toFixed(0) + ' (15%)</div>';
+            htmlContent += '<div style="font-size: 14px; color: #5A7A6A; text-transform: uppercase; letter-spacing: 0.05em;">Net Sales: 100%</div>';
             htmlContent += '</div>';
             
             // P&L Quadrant Grid
@@ -1368,31 +1374,29 @@
             var actualCash = level1Data.total_cash || 0;
             var expectedCash = level1Data.weekly_revenue * 0.15; // 15% expected cash
             var cashEmployees = (level1Data.labor_cost_amount * 0.12) + (level1Data.labor_cost_amount * 0.03); // Cash employees + overtime from quadrant 1
-            var cashDifference = actualCash - cashEmployees; // Since no cash employees, this equals actualCash
+            var cashAdjusted = actualCash - cashEmployees; // Ready for actual cash employee data
             var netProfit = level1Data.weekly_revenue - level1Data.labor_cost_amount - 8400 - 3154;
             
             htmlContent += '<div style="background: linear-gradient(135deg, #F0FFF0 0%, #F5FAF0 100%); padding: 25px; border-bottom-right-radius: 13px; border: 1px solid rgba(124, 179, 66, 0.15);">';
             htmlContent += '<h3 style="color: #4A7C59; font-size: 24px; margin-bottom: 15px;">PROFIT (' + ((netProfit/level1Data.weekly_revenue)*100).toFixed(1) + '%)</h3>';
-            htmlContent += '<div style="font-size: 18px; line-height: 1.8;">';
-            htmlContent += '<div style="font-size: 24px; font-weight: bold; color: #34C759;">Net Profit: $' + netProfit.toFixed(0) + '</div>';
-            htmlContent += '<div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0;">';
-            htmlContent += '<strong style="font-size: 20px;">Weekly Cash Position:</strong><br>';
-            htmlContent += 'Cash Expected (15%): <strong>$' + expectedCash.toFixed(0) + '</strong><br>';
-            htmlContent += 'Less: Cash Employees: <strong>$' + cashEmployees.toFixed(0) + '</strong><br>';
-            htmlContent += '<div style="border-top: 1px solid #e0e0e0; margin-top: 8px; padding-top: 8px;">';
-            htmlContent += 'Total Cash Collected: <strong style="color: #34C759; font-size: 20px;">$' + actualCash.toFixed(0) + '</strong><br>';
+            htmlContent += '<div style="font-size: 20px; line-height: 1.8;">';
+            htmlContent += 'Total Cash Collected: $' + actualCash.toFixed(0) + '<br>';
+            htmlContent += 'Less: Cash Employees: $' + cashEmployees.toFixed(0) + '<br>';
+            htmlContent += '<div style="border-top: 1px solid #e0e0e0; margin-top: 10px; padding-top: 10px;">';
+            htmlContent += '<strong>Cash Adjusted: $' + cashAdjusted.toFixed(0) + '</strong><br>';
+            htmlContent += '</div>';
+            htmlContent += '<div style="border-top: 1px solid #e0e0e0; margin-top: 10px; padding-top: 10px;">';
+            htmlContent += '<strong style="color: #34C759;">Net Profit: $' + netProfit.toFixed(0) + '</strong>';
             htmlContent += '</div>';
             htmlContent += '</div>';
             htmlContent += '</div>';
             htmlContent += '</div>';
             htmlContent += '</div>';
-            htmlContent += '</div>';
-
  
             // LEVEL 2 - Shift Management Dashboard (with larger fonts)
             htmlContent += '<div class="level" style="width: 100%; margin-top: 30px;">';
             htmlContent += '<h2 style="font-size: 32px;">Level 2: Shift Management Dashboard - ' + restaurantName + '</h2>';
-            htmlContent += '<div class="day-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; width: 100%;">';
+            htmlContent += '<div class="day-grid" style="display: grid; grid-template-columns: repeat(7, minmax(180px, 1fr)); gap: 12px; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;">';
             
             console.log('Level 1 Data:', level1Data);
             console.log('Total Cash:', level1Data.total_cash);
@@ -1432,19 +1436,7 @@
                 
                 htmlContent += '</div>'; // Close day-card
             }
-            
-            htmlContent += '</div>'; // Close day-grid
-            
-            // Week summary below grid - also with larger fonts
-            htmlContent += '<div style="margin-top: 24px; padding: 24px; background: #f5f5f7; border-radius: 8px; width: 100%; font-size: 18px;">';
-            htmlContent += '<strong style="font-size: 20px;">Week Performance Summary:</strong><br><br>';
-            htmlContent += 'Best Manager: Garcia, M (Avg 6.9 min, 3 total voids)<br>';
-            htmlContent += 'Most Improved: Williams, A (Sunday performance exceeded expectations)<br>';
-            htmlContent += 'Action Required: Saturday evening shift needs review (3 voids)';
-            htmlContent += '</div>';
-            
-            htmlContent += '</div>'; // Close level 2            }
-            
+                                   
             htmlContent += '</div>'; // Close day-grid
             
             // Week summary below grid
@@ -1457,16 +1449,15 @@
             
             htmlContent += '</div>'; // Close level 2      
      
-            htmlContent += '</div>'; // Close level 2 container COMPLETELY
-            
+                        
             // LEVEL 3 - Daily Shift Detail (properly aligned with L1 & L2)
-            htmlContent += '<div class="level" id="level3-container" style="max-width: 1400px; margin: 30px auto; width: 100%;">';
+            htmlContent += '<div class="level" id="level3-container" style="margin-top: 30px;">';
             htmlContent += '<h2 style="font-size: 32px; color: #2E4A3E; font-family: \'Crimson Text\', serif; margin-bottom: 20px;">Level 3: Daily Shift Detail</h2>';
             htmlContent += '<p style="text-align: center; color: #5A7A6A; padding: 40px; font-size: 20px;">Click on any day in Level 2 above to see detailed shift information</p>';
             htmlContent += '</div>'; // Close level 3 container
             
             // LEVEL 4 - Employee Performance Details (properly aligned)
-            htmlContent += '<div class="level" id="level4-container" style="max-width: 1400px; margin: 30px auto; width: 100%;">';
+            htmlContent += '<div class="level" id="level4-container" style="margin-top: 30px;">';
             htmlContent += '<h2 style="font-size: 32px; color: #2E4A3E; font-family: \'Crimson Text\', serif; margin-bottom: 20px;">Level 4: Employee Performance Details</h2>';
             htmlContent += '<div style="overflow-x: auto;">';
             htmlContent += '<table style="width: 100%; max-width: 1200px; margin: 20px auto; border-collapse: separate; border-spacing: 0; border-radius: 12px; overflow: hidden;">';
