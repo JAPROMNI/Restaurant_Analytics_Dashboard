@@ -32,9 +32,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        // Only for iPad
         if (navigator.userAgent.match(/iPad/i)) {
-            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1600');
+            var viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport) {
+                viewport.setAttribute('content', 'width=1600');
+            }
         }
     <title>🌵 Desert Oasis Weekly P&L Dashboard</title>
     <style>
