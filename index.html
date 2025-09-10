@@ -31,6 +31,7 @@
         
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src *;">
     <title>📊 OMNI Analytics Dashboard</title>
 
     <style>
@@ -2689,7 +2690,7 @@
                     // Try to fetch real data from Supabase
                     try {
                         var SUPABASE_URL = 'https://jhycpvrardpfkhetmjyq.supabase.co';
-                        var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoeWNwdnJhcmRwZmtoZXRtanlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM4NTA3NzAsImV4cCI6MjA0OTQyNjc3MH0.1uxxYgwq0pZiDZhGrjHjShFk-pKxnFGN9iHwKKPRuNY';
+                        var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpoeWNwdnJhcmRwZmtoZXRtanlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc0OTI5ODcsImV4cCI6MjA3MzA2ODk4N30.GcniK_5UBdW6zQcR5T09SaKdZ15-cee1f-1AMXsDbhw';
                         
                         // Extract restaurant code from current context
                         var restaurantCode = 'SDR'; // Default, you may want to get this from context
