@@ -227,14 +227,38 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .days-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    
     .modal-content {
         width: 85%;
         height: 85vh;
         margin: 7.5vh auto;
+    }
+    
+    /* Fix the day cards to use full modal width */
+    .modal-body .days-grid {
+        grid-template-columns: repeat(7, 1fr);
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 24px 10px;
+        gap: 10px;
+    }
+    
+    .modal-body .day-card {
+        min-height: 200px;
+        padding: 16px 10px;
+    }
+    
+    .day-card .day-sales {
+        font-size: 24px;
+    }
+    
+    .day-shift-info {
+        padding: 8px;
+        font-size: 10px;
+    }
+    
+    .shift-sales {
+        font-size: 13px;
     }
 }
 
